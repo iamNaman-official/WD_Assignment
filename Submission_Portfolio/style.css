@@ -48,13 +48,12 @@ header{
     gap: 2em;
     position:relative;
     border-radius: 150px;
-    border: 2px solid ;
-
+    border: 2px solid;
+    padding: 10px 40px;
 }
 
 .nav_bar ul li{
     position: relative;
-    margin-right: 20px;
 }
 
 .nav_bar ul li a{
@@ -62,7 +61,6 @@ header{
     color: var(--btn-color);
     font-weight: 600;
     position:relative;
-    margin-right: 25px;
     padding:5px 5px;
 }
 
