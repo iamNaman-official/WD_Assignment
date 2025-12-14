@@ -117,6 +117,70 @@ header{
 .aboutMe_content p {
     font-size: 2rem;   
     font-weight: 500;             
-    line-height: 1.8;                 
+    line-height: 2;                 
     margin-bottom: 2rem;
+}
+
+/* --- SECTIONS: Skills, Interests, Projects, Goals --- */
+
+/* container styling: Gives each section a subtle card look */
+.skills, .Interests, .projects, .goals {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.03); 
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    transition: all 0.3s ease-in-out;
+}
+
+
+.skills:hover, .Interests:hover, .projects:hover, .goals:hover {
+    border-color: var(--dark-col);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 238, 255, 0.1);
+}
+
+
+.aboutMe_content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--font-col);
+    letter-spacing: 1px;
+}
+
+.aboutMe_content h2 i {
+    color: var(--dark-col);
+    margin-left: 10px;
+}
+
+
+.aboutMe_content ul {
+    list-style: none; 
+    padding-left: 1rem;
+}
+
+.aboutMe_content li {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+    color: var(--light-col);
+    position: relative;
+    padding-left: 35px; 
+    transition: 0.3s ease;
+}
+
+.aboutMe_content li::before {
+    content: ">";
+    color: var(--dark-col);
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+    font-family: monospace; 
+}
+
+.aboutMe_content li:hover {
+    color: var(--font-col); 
+    transform: translateX(10px); 
+    text-shadow: 0 0 5px var(--dark-col);
 }
