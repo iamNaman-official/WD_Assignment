@@ -159,3 +159,95 @@ header{
     transform: translateY(-10px);
     cursor: pointer;
 }
+
+/* --- Tablet / Small Laptop View (Max Width 1024px) --- */
+@media (max-width: 1024px) {
+
+    html {
+        font-size: 90%; 
+    }
+
+    section, .home, .aboutMe {
+        padding: 5rem 5%;
+    }
+
+    .home, .aboutMe {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .header_image img {
+        width: 350px;
+        height: 350px;
+    }
+
+    .social {
+        gap: 3rem; 
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+/* --- Mobile View (Max Width 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. HEADER & NAVIGATION (Applies to all pages) */
+    .nav_bar {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .nav_bar ul {
+        flex-direction: column; 
+        gap: 1rem;
+        width: 100%;
+        padding: 15px;
+        border: 1px solid var(--dark-col); 
+    }
+
+    .nav_bar ul li {
+        margin-right: 0; 
+    }
+
+    /* 2. TEXT & TYPOGRAPHY ADJUSTMENTS */
+    .header_text h1, .aboutMe_content h1 {
+        font-size: 3rem; 
+    }
+
+    .header_text h2 {
+        font-size: 1.8rem;
+    }
+
+    .header_text p, .aboutMe_content p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    /* 3. IMAGE ADJUSTMENTS */
+    .header_image img {
+        width: 70vw; 
+        height: 70vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    /* 4. FORM & BUTTON ADJUSTMENTS (Contact Page) */
+    form {
+        width: 100%;
+    }
+
+    input, textarea {
+        font-size: 1rem; 
+        padding: 12px;
+    }
+
+ 
+    .CVD, button {
+        width: 100%; 
+        text-align: center;
+        justify-content: center;
+    }
+}

@@ -73,7 +73,6 @@ header{
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-
 .nav_bar ul li a.active{
     background-color: var(--font-col);
     color: var(--dark-col);
@@ -100,89 +99,213 @@ header{
     cursor: pointer;
 }
 
-/* --- ABOUT ME SECTION STYLES --- */
-.aboutMe{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10em 10%;
-}
-
-.aboutMe_content h1 {
-    font-size: 4.5rem;                
-    margin-bottom: 2rem;              
-    color: var(--dark-col);           
-}
-
-.aboutMe_content p {
-    font-size: 2rem;   
-    font-weight: 500;             
-    line-height: 2;                 
-    margin-bottom: 2rem;
-}
-
-/* --- SECTIONS: Skills, Interests, Projects, Goals --- */
-
-/* container styling: Gives each section a subtle card look */
-.skills, .Interests, .projects, .goals {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.03); 
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    transition: all 0.3s ease-in-out;
-}
-
-
-.skills:hover, .Interests:hover, .projects:hover, .goals:hover {
-    border-color: var(--dark-col);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 238, 255, 0.1);
-}
-
-
-.aboutMe_content h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--font-col);
-    letter-spacing: 1px;
-}
-
-.aboutMe_content h2 i {
-    color: var(--dark-col);
-    margin-left: 10px;
-}
-
-
-.aboutMe_content ul {
-    list-style: none; 
-    padding-left: 1rem;
-}
-
-.aboutMe_content li {
-    font-size: 1.6rem;
-    margin-bottom: 1.2rem;
-    color: var(--light-col);
+.home{
     position: relative;
-    padding-left: 35px; 
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    padding:10rem 10%;
+}
+
+.header_image img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px var(--dark-col);
+    background: radial-gradient(circle, #1e293b 0%, #020617 100%);
+    object-fit: cover;
+}
+
+
+.header_text h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.header_text h1{
+    font-size: 4em;
+    font-weight: 800;
+}
+
+.header_text h2{
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.header_text h1 span, .header_text h2 span{
+    color: var(--dark-col);
+}
+
+.header_text p{
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: var(--light-col);
+}
+
+.social{
+    position: relative;
+    gap:10em;
+}
+
+.social a{
+    font-size: 2em;
+    color: var(--dark-col);
+    display: inline-block;
+    background: transparent;
+}
+.social a:hover{
+    color: var(--font-col);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+/* --- CONTACT SECTION STYLES --- */
+section {
+    padding: 5rem 10%;
+    max-width: 800px; 
+    margin: 0 auto;   
+}
+
+section h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section h1 i {
+    color: var(--dark-col);
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+/* Labels */
+label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--dark-col);
+}
+
+/* Inputs and Text Area */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05); 
+    border: 2px solid var(--light-col);
+    border-radius: 10px;
+    color: var(--font-col);
+    font-size: 1rem;
+    outline: none;
     transition: 0.3s ease;
 }
 
-.aboutMe_content li::before {
-    content: ">";
-    color: var(--dark-col);
-    position: absolute;
-    left: 0;
-    font-weight: 900;
-    font-family: monospace; 
+/* Glow effect when you click/type in a box */
+input:focus, textarea:focus {
+    border-color: var(--dark-col);
+    box-shadow: 0 0 10px var(--dark-col);
+    background: rgba(0, 238, 255, 0.05);
 }
 
-.aboutMe_content li:hover {
-    color: var(--font-col); 
-    transform: translateX(10px); 
-    text-shadow: 0 0 5px var(--dark-col);
+
+button {
+    margin-top: 1rem;
+    padding: 12px 25px;
+    background-color: var(--btn-color);
+    color: var(--font-light-col);
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(--btn-color);
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--font-col);
+    color: var(--dark-col);
+    box-shadow: 0px 0px 20px var(--font-col);
+    transform: scale(1.02);
+}/* --- CONTACT SECTION STYLES --- */
+section {
+    padding: 5rem 10%;
+    max-width: 800px; 
+    margin: 0 auto;   
+}
+
+section h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section h1 i {
+    color: var(--dark-col);
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+/* Labels */
+label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--dark-col);
+}
+
+/* Inputs and Text Area */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05); 
+    border: 2px solid var(--light-col);
+    border-radius: 10px;
+    color: var(--font-col);
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Glow effect when you click/type in a box */
+input:focus, textarea:focus {
+    border-color: var(--dark-col);
+    box-shadow: 0 0 10px var(--dark-col);
+    background: rgba(0, 238, 255, 0.05);
+}
+
+
+button {
+    margin-top: 1rem;
+    padding: 12px 25px;
+    background-color: var(--btn-color);
+    color: var(--font-light-col);
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px var(--btn-color);
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--font-col);
+    color: var(--dark-col);
+    box-shadow: 0px 0px 20px var(--font-col);
+    transform: scale(1.02);
 }
 
 /* --- Tablet / Small Laptop View (Max Width 1024px) --- */
